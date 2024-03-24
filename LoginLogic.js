@@ -22,12 +22,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 var newUser = {
                     username: username,
                     email: email,
-                    password: password
+                    password: password,
+                    repos: {}
                 }
                 registeredUsers[email] = newUser
                 localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers))
                 registrationForm.reset()
-                console.log('users: ',registeredUsers)
             }
         })
     }
@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
         loginForm.addEventListener('submit',(event)=>{
             event.preventDefault()
             var email = document.getElementById('email1').value
-            console.log(email)
             var password = document.getElementById('password1').value
             
             if (registeredUsers[email]) {

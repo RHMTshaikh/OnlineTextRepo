@@ -232,3 +232,8 @@ input[type="submit"]{
         border-radius: 5px 5px 0 0;
     }
 }
+
+/*user page style*/
+.user-details button{
+    text-transform: none;
+}
