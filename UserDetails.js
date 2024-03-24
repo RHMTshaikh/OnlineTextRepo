@@ -22,23 +22,21 @@ user_password.innerText = curr_user.password
 
 
 const updateRepoList = ()=>{
-    if (Object.keys(curr_user.repos) != 0) {
-        let repos = curr_user.repos
-        const repo_list = document.querySelector('.repo-list')
-        let count = 1
-        let className
-        for(let key in repos){
-            const repo_btn = document.createElement('button')
-            repo_btn.innerText = key
-            className = `repo-${count}`
-            repo_btn.classList.add(className)
-            count++
-            repo_list.appendChild(repo_btn)
-            
-            repo_btn.addEventListener('click',(ev)=>{
-                displayRepo(ev)
-            })
-        }
+    let repos = curr_user.repos
+    const repo_list = document.querySelector('.repo-list')
+    let count = 1
+    let className
+    for(let key in repos){
+        const repo_btn = document.createElement('button')
+        repo_btn.innerText = key
+        className = `repo-${count}`
+        repo_btn.classList.add(className)
+        count++
+        repo_list.appendChild(repo_btn)
+        
+        repo_btn.addEventListener('click',(ev)=>{
+            displayRepo(ev)
+        })
     }
 }
 const createNewRepo = (name, text)=>{
