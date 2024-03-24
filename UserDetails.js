@@ -14,7 +14,6 @@ const display_repo = document.querySelector('.display-repo')
 let user_name = document.querySelector('.user-details .name span')
 let user_email = document.querySelector('.user-details .email span')
 let user_password = document.querySelector('.user-details .password span')
-let repos = document.querySelector('.user-details .repos')
 
 user_name.innerText = curr_user.username
 user_email.innerText = curr_user.email
